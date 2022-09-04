@@ -1,11 +1,13 @@
 <main class="container">
   <%= link_to "Back to items", items_path %>
 
-  <h1 class="my-4">
-    New item
-  </h1>
+  <%= turbo_frame_tag "modal" do %>
+    <h1 class="h3 modal-header">
+      New item
+    </h1>
 
-  <%= turbo_frame_tag "new_item" do %>
-    <%= render "items/form", item: @item %>
+    <div class="modal-body">
+      <%= render "items/form", item: @item %>
+    </div>
   <% end %>
 </main>

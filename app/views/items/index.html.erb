@@ -7,10 +7,8 @@
       <%= link_to "New item",
                   new_item_path,
                   class: "btn btn-primary",
-                  data: { turbo_frame: "new_item" } %>
+                  data: { turbo_frame: "modal" } %>
     </div>
-
-    <%= turbo_frame_tag "new_item" %>
 
     <div id="items" class="d-flex flex-column gap-3">
       <%= render @items %>
